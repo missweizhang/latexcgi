@@ -22,14 +22,6 @@
       pre {background-color: #EEE;margin:0;padding: .5em;}
     </style>
     
-<script>
-preincludes = {
- "pre1": {
-    "pre2": "longtable.dtx",
-    "pre3": "latexmkrc",
- }
-}
-</script>
 </head>
   <body>
 
@@ -38,14 +30,7 @@ preincludes = {
 <a href="./settings">Site Settings page</a>
 <hr>
 
-<h1 id="ll">LaTeX CGI Tests 2</h1>
-
-    <p>Larger Examples</p>
-    <ul>
-      <li><a href="#scottish-play">Macbeth</a></li>
-      <li><a href="#longtable">Longtable</a></li>
-    </ul>
-    
+<h1 id="ll">LaTeX CGI Tests 2</h1>    
     
 
 <h2 id="scottish-play">Macbeth</h2>
@@ -75,16 +60,6 @@ preincludes = {
 
 \usepackage{graphicx} % include graphics, as on our title page
 \usepackage{fancyhdr} % fancy page headers: definitely the way to go
-
-% Code for creating empty pages
-% No headers on empty pages before new chapter see http://www.markschenk.com/tensegrity/latexexplanation.html
-\makeatletter
-\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
-    \hbox{}
-    \thispagestyle{empty}
-    \newpage
-    \if@twocolumn\hbox{}\newpage\fi\fi\fi}
-\makeatother \clearpage{\pagestyle{plain}\cleardoublepage}
 
 % parindent allows us to control the appearance of text blocks.
 % a positive value indents the first line, while a negative value outdents the first line,
@@ -192,9 +167,7 @@ preincludes = {
 
 \pagestyle{fancy}
 \fancyhead{}
-\NewPage\pagenumbering{roman}
 
-\begin{quote}\begin{quote}\tableofcontents\end{quote}\end{quote}
 \NewPage
 
 \begin{quote}\Sf\large
